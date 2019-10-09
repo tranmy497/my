@@ -1,0 +1,14 @@
+insert into users(name, phone, email, birthday)
+	values
+        ('long', 'phone1', 'email1@gmail.com', '1999-01-01'),
+        ('linh', 'phone2', 'email2@gmail.com', '1999-01-05'),
+        ('hung', 'phone3', 'email3@gmail.com', '1999-01-02'),
+        ('hoa', 'phone4', 'email4@gmail.com', '2000-01-03'),
+        ('hai', 'phone5', 'email5@gmail.com', '2002-01-02');
+
+
+select * from users where name like '%a%';
+
+update users set email = 'test@gmail.com' where name like '%n%' or phone like '%5%';
+
+delete from users where email like '%@gmail.com' and year(birthday) = 1997 and phone like '%8%'
